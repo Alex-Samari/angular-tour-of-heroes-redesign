@@ -1,0 +1,21 @@
+<h1>{{ title }}</h1>
+<div class="header-bar"></div>
+<nav>
+  <button
+    kendoButton
+    look="outline"
+    routerLink="/dashboard"
+    routerLinkActive="active"
+  >
+    Dashboard
+  </button>
+  <button
+    kendoButton
+    look="outline"
+    routerLink="/heroes"
+    routerLinkActive="active"
+  >
+    Heroes
+  </button>
+</nav>
+<router-outlet></router-outlet>
