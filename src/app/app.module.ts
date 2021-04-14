@@ -21,6 +21,7 @@ import { NavigationModule } from '@progress/kendo-angular-navigation';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { ArtistAttributionsComponent } from './artist-attributions/artist-attributions.component';
 
 
 
@@ -51,6 +52,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     HeroSearchComponent,
     HeroesComponent,
     HeroDetailComponent,
+    ArtistAttributionsComponent,
   ],
   providers: [HeroService],
   bootstrap: [AppComponent],
