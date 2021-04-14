@@ -17,6 +17,8 @@ import { HeroSearchComponent } from "./hero-search.component";
 import { ButtonModule } from "@progress/kendo-angular-buttons";
 import { LayoutModule } from "@progress/kendo-angular-layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NavigationModule } from '@progress/kendo-angular-navigation';
+
 
 @NgModule({
   imports: [
@@ -32,6 +34,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ButtonModule,
     LayoutModule,
     BrowserAnimationsModule,
+    NavigationModule,
   ],
   declarations: [
     AppComponent,
