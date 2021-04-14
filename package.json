@@ -31,6 +31,7 @@
     "@progress/kendo-angular-progressbar": "^2.0.0",
     "@progress/kendo-licensing": "^1.0.2",
     "@progress/kendo-theme-default": "^4.36.0",
+    "@progress/kendo-theme-material": "^3.31.1",
     "angular-in-memory-web-api": "0.9.0",
     "rxjs": "6.5.5",
     "tslib": "^2.0.0",
