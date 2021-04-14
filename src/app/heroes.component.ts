@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Hero } from "./hero";
+import { HeroService } from "./hero.service";
 
 @Component({
-  selector: 'my-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  selector: "my-heroes",
+  templateUrl: "./heroes.component.html",
+  styleUrls: ["./heroes.component.css"],
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -18,12 +18,10 @@ export class HeroesComponent implements OnInit {
   constructor(private router: Router, private heroService: HeroService) {}
 
   getHeroes(): void {
-    this.heroService
-      .getHeroes()
-      .subscribe(
-        heroes => (this.heroes = heroes),
-        error => (this.error = error)
-      )
+    this.heroService.getHeroes().subscribe(
+      (heroes) => (this.heroes = heroes),
+      (error) => (this.error = error)
+    );
   }
 
   addHero(): void {
@@ -40,12 +38,15 @@ export class HeroesComponent implements OnInit {
 
   deleteHero(hero: Hero, event: any): void {
     event.stopPropagation();
-    this.heroService.delete(hero).subscribe(res => {
-      this.heroes = this.heroes.filter(h => h !== hero);
-      if (this.selectedHero === hero) {
-        this.selectedHero = null;
-      }
-    }, error => (this.error = error));
+    this.heroService.delete(hero).subscribe(
+      (res) => {
+        this.heroes = this.heroes.filter((h) => h !== hero);
+        if (this.selectedHero === hero) {
+          this.selectedHero = null;
+        }
+      },
+      (error) => (this.error = error)
+    );
   }
 
   ngOnInit(): void {
@@ -58,6 +59,6 @@ export class HeroesComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedHero.id]);
+    this.router.navigate(["/detail", this.selectedHero.id]);
   }
 }

@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable, Subject, of } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Observable, Subject, of } from "rxjs";
 import {
   catchError,
   debounceTime,
   distinctUntilChanged,
-  switchMap
-} from 'rxjs/operators';
-import { Hero } from './hero';
-import { HeroSearchService } from './hero-search.service';
+  switchMap,
+} from "rxjs/operators";
+import { Hero } from "./hero";
+import { HeroSearchService } from "./hero-search.service";
 
 @Component({
-  selector: 'my-hero-search',
-  templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.css'],
-  providers: [HeroSearchService]
+  selector: "my-hero-search",
+  templateUrl: "./hero-search.component.html",
+  styleUrls: ["./hero-search.component.css"],
+  providers: [HeroSearchService],
 })
 export class HeroSearchComponent implements OnInit {
   heroes: Observable<Hero[]>;
@@ -34,15 +34,14 @@ export class HeroSearchComponent implements OnInit {
     this.heroes = this.searchTerms.pipe(
       debounceTime(300), // wait for 300ms pause in events
       distinctUntilChanged(), // ignore if next search term is same as previous
-      switchMap(
-        term =>
-          term // switch to new observable each time
-            ? // return the http search observable
-              this.heroSearchService.search(term)
-            : // or the observable of empty heroes if no search term
-              of<Hero[]>([])
+      switchMap((term) =>
+        term // switch to new observable each time
+          ? // return the http search observable
+            this.heroSearchService.search(term)
+          : // or the observable of empty heroes if no search term
+            of<Hero[]>([])
       ),
-      catchError(error => {
+      catchError((error) => {
         // TODO: real error handling
         console.log(`Error in component ... ${error}`);
         return of<Hero[]>([]);
@@ -51,7 +50,7 @@ export class HeroSearchComponent implements OnInit {
   }
 
   gotoDetail(hero: Hero): void {
-    const link = ['/detail', hero.id];
+    const link = ["/detail", hero.id];
     this.router.navigate(link);
   }
 }
