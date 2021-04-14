@@ -3,16 +3,17 @@
 /* We need this for kendo styles to loead*/
 @import "~@progress/kendo-theme-material/dist/all.scss";
 
-body,
-input[text],
-button {
-  font-family: Cambria, Georgia;
-}
-* {
-  font-family: Arial;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 ul,
 li {
   text-decoration: none;
+}
+
+.title {
+  font-family: "Indie Flower", serif;
 }
