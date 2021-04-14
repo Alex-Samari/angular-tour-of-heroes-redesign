@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/variables.scss";
-/* We need this for kendo styles to loead*/
+/* We need this for kendo styles to load*/
 @import "~@progress/kendo-theme-material/dist/all.scss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
 body {
   margin: 0;

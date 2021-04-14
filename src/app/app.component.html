@@ -1,24 +1,29 @@
-<kendo-appbar>
-  <kendo-appbar-section>
-    <h1 class="title">{{ title }}</h1>
-  </kendo-appbar-section>
+<div class="app-container">
+  <kendo-appbar class="appbar-container">
+    <kendo-appbar-section>
+      <h1 class="title">{{ title }}</h1>
+    </kendo-appbar-section>
 
-  <kendo-appbar-spacer [width]="'100px'"></kendo-appbar-spacer>
+    <kendo-appbar-spacer [width]="'100px'"></kendo-appbar-spacer>
 
-  <kendo-appbar-section>
-    <kendo-tabstrip (tabSelect)="navigate($event)">
-      <kendo-tabstrip-tab [title]="'Dashboard'" [selected]="true">
-      </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab [title]="'Heroes'"> </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab [title]="'Artist Attributions'"> </kendo-tabstrip-tab>
-    </kendo-tabstrip>
-  </kendo-appbar-section>
+    <kendo-appbar-section>
+      <kendo-tabstrip (tabSelect)="navigate($event)">
+        <kendo-tabstrip-tab [title]="'Dashboard'" [selected]="true">
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Heroes'"> </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Artist Attributions'">
+        </kendo-tabstrip-tab>
+      </kendo-tabstrip>
+    </kendo-appbar-section>
 
-  <kendo-appbar-spacer></kendo-appbar-spacer>
+    <kendo-appbar-spacer></kendo-appbar-spacer>
 
-  <kendo-appbar-section>
-    <my-hero-search></my-hero-search>
-  </kendo-appbar-section>
-</kendo-appbar>
+    <kendo-appbar-section>
+      <my-hero-search></my-hero-search>
+    </kendo-appbar-section>
+  </kendo-appbar>
 
-<router-outlet></router-outlet>
+  <div class="page-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

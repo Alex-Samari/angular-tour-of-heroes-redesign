@@ -1,4 +1,18 @@
 .k-tabstrip-content,
 .k-tabstrip > .k-content {
-  padding: 0;
+  padding: 0 !important;
+}
+
+.app-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.appbar-container {
+  overflow: unset !important;
+}
+
+.page-container {
+  flex: 1 1 auto;
 }
