@@ -1,21 +1,24 @@
-<h1>{{ title }}</h1>
-<div class="header-bar"></div>
-<nav>
-  <button
-    kendoButton
-    look="outline"
-    routerLink="/dashboard"
-    routerLinkActive="active"
-  >
-    Dashboard
-  </button>
-  <button
-    kendoButton
-    look="outline"
-    routerLink="/heroes"
-    routerLinkActive="active"
-  >
-    Heroes
-  </button>
-</nav>
+<kendo-appbar>
+  <kendo-appbar-section>
+    <h1 class="title">{{ title }}</h1>
+  </kendo-appbar-section>
+
+  <kendo-appbar-spacer [width]="'100px'"></kendo-appbar-spacer>
+
+  <kendo-appbar-section>
+    <kendo-tabstrip (tabSelect)="navigate($event)">
+      <kendo-tabstrip-tab [title]="'Dashboard'" [selected]="true">
+      </kendo-tabstrip-tab>
+      <kendo-tabstrip-tab [title]="'Heroes'"> </kendo-tabstrip-tab>
+      <kendo-tabstrip-tab [title]="'Artist Attributions'"> </kendo-tabstrip-tab>
+    </kendo-tabstrip>
+  </kendo-appbar-section>
+
+  <kendo-appbar-spacer></kendo-appbar-spacer>
+
+  <kendo-appbar-section>
+    <my-hero-search></my-hero-search>
+  </kendo-appbar-section>
+</kendo-appbar>
+
 <router-outlet></router-outlet>

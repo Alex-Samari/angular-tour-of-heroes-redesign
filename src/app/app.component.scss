@@ -1,5 +1,4 @@
-@import "assets/variables.scss";
-
-kendo-tabstrip-tab:hover {
-  color: $amaranth-purple;
+.k-tabstrip-content,
+.k-tabstrip > .k-content {
+  padding: 0;
 }
