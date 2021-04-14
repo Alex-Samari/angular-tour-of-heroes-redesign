@@ -18,6 +18,8 @@ import { ButtonModule } from "@progress/kendo-angular-buttons";
 import { LayoutModule } from "@progress/kendo-angular-layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavigationModule } from '@progress/kendo-angular-navigation';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { NavigationModule } from '@progress/kendo-angular-navigation';
     LayoutModule,
     BrowserAnimationsModule,
     NavigationModule,
+    InputsModule,
   ],
   declarations: [
     AppComponent,

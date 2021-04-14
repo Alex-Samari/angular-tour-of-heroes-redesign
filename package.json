@@ -24,6 +24,7 @@
     "@angular/router": "10.0.5",
     "@progress/kendo-angular-buttons": "^6.1.0",
     "@progress/kendo-angular-common": "^2.0.0",
+    "@progress/kendo-angular-inputs": "^7.2.0",
     "@progress/kendo-angular-l10n": "^3.0.0",
     "@progress/kendo-angular-layout": "^6.1.4",
     "@progress/kendo-angular-navigation": "^1.0.0",
@@ -35,7 +36,9 @@
     "angular-in-memory-web-api": "0.9.0",
     "rxjs": "6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "0.10.3"
+    "zone.js": "0.10.3",
+    "@progress/kendo-angular-intl": "^3.0.0",
+    "@progress/kendo-drawing": "^1.5.12"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.4",
