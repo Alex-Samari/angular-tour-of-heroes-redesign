@@ -22,6 +22,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { ArtistAttributionsComponent } from './artist-attributions/artist-attributions.component';
+import { ListViewModule } from '@progress/kendo-angular-listview';
+
 
 
 
@@ -45,6 +47,7 @@ import { ArtistAttributionsComponent } from './artist-attributions/artist-attrib
     InputsModule,
     IconsModule,
     DropDownsModule,
+    ListViewModule,
   ],
   declarations: [
     AppComponent,
