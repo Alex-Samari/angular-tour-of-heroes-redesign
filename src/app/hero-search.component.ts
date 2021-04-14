@@ -19,6 +19,11 @@ import { HeroSearchService } from "./hero-search.service";
 export class HeroSearchComponent implements OnInit {
   heroes: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
+  defaultHero: Hero = {
+    id: null,
+    name: "Hero Search",
+    img: "",
+  };
 
   constructor(
     private heroSearchService: HeroSearchService,
@@ -50,7 +55,16 @@ export class HeroSearchComponent implements OnInit {
   }
 
   gotoDetail(hero: Hero): void {
+    if (!hero.id) return;
     const link = ["/detail", hero.id];
     this.router.navigate(link);
+  }
+
+  initialSearch() {
+    this.search("");
+  }
+
+  itemDisabled(item: any) {
+    return item.dataItem.id === null; // disable the placeholder defaultHero
   }
 }
