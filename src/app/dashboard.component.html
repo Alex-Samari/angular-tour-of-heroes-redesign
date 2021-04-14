@@ -1,15 +1,19 @@
-<h2 class="title">Top Heroes</h2>
+<div class="dashboard-container">
+  <h2 class="title">Top Heroes</h2>
 
-<div *ngFor="let hero of heroes" class="hero-container">
-  <kendo-card>
-    <a (click)="gotoDetail(hero)">
-      <kendo-card-header>
-        <div>
-          <h3 kendoCardTitle>{{ hero.name }}</h3>
-          <p kendoCardSubtitle>{{ hero.id }}</p>
-        </div>
-      </kendo-card-header>
-      <img [src]="hero.img" [alt]="hero.name" />
-    </a>
-  </kendo-card>
+  <div class="hero-container">
+    <div *ngFor="let hero of heroes" class="hero">
+      <kendo-card>
+        <a (click)="gotoDetail(hero)">
+          <kendo-card-header>
+            <div>
+              <h3 kendoCardTitle>{{ hero.name }}</h3>
+              <p kendoCardSubtitle>{{ hero.id }}</p>
+            </div>
+          </kendo-card-header>
+          <img [src]="hero.img" [alt]="hero.name" />
+        </a>
+      </kendo-card>
+    </div>
+  </div>
 </div>
